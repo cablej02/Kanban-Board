@@ -4,12 +4,15 @@
   font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    width: 100%;
 }
 
 /* webkit solution */
@@ -32,7 +35,7 @@ a:hover {
 }
 
 body {
-  background: #ECF0F1;
+  background: #483d3f;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
@@ -54,7 +57,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #dddddd;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -105,7 +108,7 @@ tbody tr:nth-child(odd) {
 }
 
 .nav-title a {
-  color: #b864c4;
+  color: #058ed9;
 }
 
 .nav-item {
@@ -130,6 +133,7 @@ tbody tr:nth-child(odd) {
 
 .board {
   width: 100%;
+  padding: 0 2em;
 }
 
 .board-display {
@@ -147,15 +151,15 @@ tbody tr:nth-child(odd) {
 }
 
 .todo {
-  background-color: #e9cbec;
+  background-color: #f4ebd9;
 }
 
 .inprogress {
-  background-color: #b864c4;
+  background-color: #a39a92;
 }
 
 .done {
-  background-color: #732381;
+  background-color: #77685d;
 }
 
 .ticket-card {
@@ -181,23 +185,22 @@ tbody tr:nth-child(odd) {
 
 
 .form {
-  width: 60%;
-  height: 80%;
-  background-color: #b864c4;
+  width: 500px;
+  background-color: #f4ebd9;
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: left;
+  padding: 2.5%;
 }
 
 .form > h1, .form > label {
-  color: yellow;
+  color: #000000;
 }
 
 .form > input {
   width: 200px;
-  
 }
 
 .form > label {
@@ -207,6 +210,9 @@ tbody tr:nth-child(odd) {
 
 .form button {
   margin-top: 2.5%;
+  width: 200px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .form textarea {
@@ -222,6 +228,10 @@ tbody tr:nth-child(odd) {
   padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
+}
+
+.editBtn:hover {
+  border-color: #646cff;
 }
 
 .deleteBtn {
@@ -240,18 +250,4 @@ tbody tr:nth-child(odd) {
   width: 100%;
   align-items: center;
   justify-content: center;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
