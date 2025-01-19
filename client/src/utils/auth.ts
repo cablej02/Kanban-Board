@@ -1,6 +1,7 @@
 import { JwtPayload, jwtDecode } from 'jwt-decode';
 
 class AuthService {
+  // function is not used?
 //   getProfile() {
 //     // return the decoded token if it exists
 //     const token = this.getToken();
@@ -38,9 +39,6 @@ class AuthService {
     // get the current date
     const now = new Date();
     // return if the token is expired
-    console.log('Token is expired:', expirationDate < now);
-    console.log('Expiration date:', expirationDate);
-    console.log('Current date:', now);
     return expirationDate < now;
   }
 
