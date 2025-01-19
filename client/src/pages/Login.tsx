@@ -4,6 +4,7 @@ import Auth from '../utils/auth';
 import { login } from "../api/authAPI";
 
 const Login = () => {
+  const [error, setError] = useState('');
   const [loginData, setLoginData] = useState({
     username: '',
     password: ''
@@ -23,6 +24,8 @@ const Login = () => {
       const data = await login(loginData);
       Auth.login(data.token);
     } catch (err) {
+      // display an error for the user
+      setError('Incorrect username or password');
       console.error('Failed to login', err);
     }
   };
@@ -46,6 +49,7 @@ const Login = () => {
           onChange={handleChange}
         />
         <button type='submit'>Submit Form</button>
+        <p style={{color: 'red'}}>{error}</p>
       </form>
     </div>
     
