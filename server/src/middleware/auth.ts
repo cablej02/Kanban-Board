@@ -18,7 +18,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
 
         jwt.verify(token, secretKey, (err, user) => {
             if (err) {
-                return res.status(403).json({ message: 'Invalid token' }); // Forbidden if the token is invalid
+                return res.status(401).json({ message: 'Invalid token' }); // Unauthorized if the token is invalid
             }
 
             // Add the user data to the request object

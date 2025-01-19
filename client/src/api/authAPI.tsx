@@ -9,7 +9,15 @@ const login = async (userInfo: UserLogin) => {
             },
             body: JSON.stringify(userInfo),
         });
-        return response;
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(`Error: ${errorData.message}`);
+        }
+
+        const data = await response.json();
+
+        return data;
     } catch (error) {
         console.error('Error:', error);
     }
