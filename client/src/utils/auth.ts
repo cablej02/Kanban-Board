@@ -54,11 +54,11 @@ class AuthService {
     window.location.assign('/');
   }
 
-  logout() {
+  logout(navigate: (path:string) => void) {
     // remove the token from localStorage
     localStorage.removeItem('id_token');
     // redirect to the login page
-    window.location.assign('/login');
+    navigate('/login');
   }
 }
 
